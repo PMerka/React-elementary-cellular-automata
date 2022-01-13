@@ -5,7 +5,7 @@ function OptElement(props) {
     let id = 0;
     return ( 
         <div className='main-box'>
-            <div className="box">
+            <div className="row">
                 {props.rule.map((element) => {
                     id += 1
                         return(
@@ -13,7 +13,7 @@ function OptElement(props) {
                             </div>
                         )})}
             </div>
-            <div className="box center">
+            <div className="row center">
                 
                             <div key={id} className={`big-square ${props.option ? "blue" : "or"}`}> 
                             </div>

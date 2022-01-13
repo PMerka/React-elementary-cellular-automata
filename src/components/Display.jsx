@@ -45,13 +45,12 @@ class Display extends React.Component {
           <button onClick={ () => this.stop() }>Stop</button>
 
           <Options rule={this.automat.rule} option={this.state.option} changeOption={this.handleChangeOption }></Options>
-
+          <div>
             {this.state.result.map((row) => { 
               return( 
                 <DisplayRow key={row.ID} arg={row.row}></DisplayRow>
-              ) 
-              } 
-              )}
+              )})}
+          </div>
           </div>
         );
       }

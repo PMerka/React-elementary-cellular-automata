@@ -3,7 +3,7 @@ import React from 'react';
 function DisplayRow(props) {
     let id = 0;
     return ( 
-        <div className="box">
+        <div className="row">
                               {props.arg.map((element) => {
                                 id += 1
                   return(
