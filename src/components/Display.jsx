@@ -1,12 +1,16 @@
 import React from 'react';
 import Automaton from './MainLogic'
 import './Display.css'
+import DisplayRow from './DisplayRow';
+import Options from './Options'
 
 class Display extends React.Component {
     constructor(){
         super()
-        this.automat = new Automaton
-        this.state = {result: this.automat.result};
+
+        this.automat = new Automaton([ ... new Array(40).fill(0), 1, ... new Array(40).fill(0) ])
+        this.state = {result: this.automat.result,
+        option: this.automat.option};
       }
       
       iterate() {
@@ -17,12 +21,20 @@ class Display extends React.Component {
       }
       
       start(){
+        if(!this.timerID){
         this.timerID = setInterval(
           () => this.iterate(), 100);
+        }  
       }
       
       stop(){
         clearInterval(this.timerID);
+        this.timerID = false
+      }
+
+      handleChangeOption = (index) => {
+        this.automat.changeOption(index)
+        this.setState({option: this.automat.option})
       }
       
       render(){
@@ -31,14 +43,12 @@ class Display extends React.Component {
           <div> 
           <button onClick={ () => this.start() }>Start</button>
           <button onClick={ () => this.stop() }>Stop</button>
-            {this.state.result.map((row) => { return(
-                <div className="box">
-                  {row.map((element) => {
-                  return(
-                    <div className={`squer ${element ? "blue" : "or"}`}> 
-                    </div>
-                  )})}
-                </div>
+
+          <Options rule={this.automat.rule} option={this.state.option} changeOption={this.handleChangeOption }></Options>
+
+            {this.state.result.map((row) => { 
+              return( 
+                <DisplayRow key={row.ID} arg={row.row}></DisplayRow>
               ) 
               } 
               )}

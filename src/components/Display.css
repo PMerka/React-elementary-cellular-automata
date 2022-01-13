@@ -6,11 +6,11 @@
     width: min-content;
   }
   
-  .squer{
+  .square{
     border-style: solid;
     border-color: gray;
     border-width: 0px;
-    padding: 10px;
+    padding: 4px;
     margin: 0px;
   }
   
