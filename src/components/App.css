@@ -1,12 +1,25 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  margin: 0px auto;
-  min-height: 100vh;
+body{
   background-image: linear-gradient(100.23086731550598deg, rgba(217, 217, 231,1) 36.14198787648939%,rgba(217, 217, 231,1) 42.40441098394175%,rgba(213, 218, 234,1) 69.88402897861239%,rgba(211, 219, 237,1) 86.07590275807544%);
-  gap: 20px;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0px 0px;
+  max-width: 100vw;
+  grid-template-rows: auto auto;
   text-align: center;
   /*prevents scrolling on diplay*/
   overflow-anchor: none;
-  color: #26305c
+  color: #26305c;
+  font-size: 130%
+}
+
+@media (min-width: 1025px)  {
+  .App {
+    flex-direction: row;
+    grid-template-columns: 20% 80%;
+    font-size: 125%
+    
+  }
 }

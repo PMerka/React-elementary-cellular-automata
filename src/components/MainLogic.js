@@ -6,6 +6,7 @@ class Automaton {
     this.height = height
     this.activeID = 0
     this.result = [{ID: this.activeID, row: this.activeArray}]
+    this.periodic = true
     }
 
     changeOption = (index) => {
@@ -27,14 +28,22 @@ class Automaton {
     }
     
     newIteration(){
-      let newRow = [0]
+      let newRow = []
+      if(this.periodic){
+        const start = this.activeArray[this.activeArray.length -1]
+        const end = this.activeArray[0]
+        this.activeArray = [start, ...this.activeArray, end]
+      }
+      else{
+        this.activeArray = [0, ...this.activeArray, 0]
+      }
+      
       for(let i=1; i<(this.activeArray.length - 1); i++ ){
         //Get the rule code
         let pattern = this.activeArray[i-1].toString() + this.activeArray[i].toString() + this.activeArray[i+1].toString()
         let ruleNum = this.rule.indexOf( pattern )
         newRow.push(this.option[ruleNum])
       }
-      newRow.push(0)
 
       this.newID()
       this.result.push({ID: this.activeID, row: newRow})
