@@ -48,7 +48,7 @@ function Nav (props) {
 
             <div className="nav-full-item">
               <label>Rule in binary</label> <br />
-              <label> {props.option} </label>
+              <label> {props.option.join('')} </label>
             </div>
 
           </div>
