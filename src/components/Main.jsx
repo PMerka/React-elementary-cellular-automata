@@ -77,7 +77,7 @@ class Main extends React.Component {
         changePeriodic={this.changePeriodic}
         rule={this.state.rule}
         changeRule={this.handlechangeRule}
-        optio={this.state.option}
+        option={this.state.option}
         />
 
         <div className="main">
