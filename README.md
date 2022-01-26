@@ -1,5 +1,5 @@
 
 # [Elementary Celular Automaton on GitHub Pages](https://pmerka.github.io/React-elementary-cellular-automata/)
-![Example](https://github.com/PMerka/React-elementary-cellular-automata/examaple.png)
+![Example](example.png)
 
 The react based [elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton).
