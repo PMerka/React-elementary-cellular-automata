@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/React-elementary-cellular-automata/static/css/main.628ada9d.css",
+    "main.js": "/React-elementary-cellular-automata/static/js/main.acf5fe04.js",
+    "static/js/787.202ebf43.chunk.js": "/React-elementary-cellular-automata/static/js/787.202ebf43.chunk.js",
+    "static/media/play-button.svg": "/React-elementary-cellular-automata/static/media/play-button.b05f337757ee5143892183012db0ba9c.svg",
+    "index.html": "/React-elementary-cellular-automata/index.html",
+    "static/media/stop-button.svg": "/React-elementary-cellular-automata/static/media/stop-button.2cbc6e0fd816684e8104110efef1ac65.svg",
+    "main.628ada9d.css.map": "/React-elementary-cellular-automata/static/css/main.628ada9d.css.map",
+    "main.acf5fe04.js.map": "/React-elementary-cellular-automata/static/js/main.acf5fe04.js.map",
+    "787.202ebf43.chunk.js.map": "/React-elementary-cellular-automata/static/js/787.202ebf43.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.628ada9d.css",
+    "static/js/main.acf5fe04.js"
+  ]
+}
