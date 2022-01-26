@@ -22,6 +22,11 @@ nav{
   justify-self: start
 }
 
+.nav-full-item{
+  grid-column: 1/3;
+  font-size: 1.3rem;
+}
+
 .rule-input{
   color: #26305c;;
   width: 2.5em;

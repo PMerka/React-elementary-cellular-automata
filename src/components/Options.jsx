@@ -1,7 +1,5 @@
 import React from 'react';
 import OptElement from './OptionsElement';
-import play from './play-button.svg';
-import stop from './stop-button.svg';
 
 function Option(props) {
     let id=0;
@@ -19,6 +17,7 @@ function Option(props) {
             </div>
             )})  
             }</div>
+            
         </div>
     );
 }
