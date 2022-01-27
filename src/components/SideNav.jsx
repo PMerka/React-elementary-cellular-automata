@@ -4,7 +4,7 @@ import stop from "./stop-button.svg";
 function Nav (props) {
     return ( 
         <nav>
-          <h1> Celullar automaton </h1>
+          <h1> Cellular automaton </h1>
 
           <div className="nav-grid">
             <button
